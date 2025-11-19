@@ -1,202 +1,356 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vidwaan Consultancy - Company Registration, GST, ITR Filing Experts</title>
-  <meta name="description" content="Register your Company, LLP, GST, ITR in 7 days at lowest price. 5000+ happy clients. Free consultation."/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vidwaan Consultancy — Company Registration & Business Setup | Bangalore & Hyderabad</title>
+  <meta name="description" content="Start your company in 7 days. Company/LLP registration, GST, PAN, TAN, bookkeeping and tax compliance — Vidwaan Consultancy (Bangalore & Hyderabad)." />
+  <link rel="canonical" href="https://vidwaanconsultancy.com/" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vidwaan Consultancy — Company Registration & Business Setup" />
+  <meta property="og:description" content="Start your company in 7 days. Company/LLP registration, GST, PAN, TAN & compliance. Free consultation." />
+  <meta property="og:image" content="/assets/images/og-image.png" />
+  <meta property="og:url" content="https://vidwaanconsultancy.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#052B5F" />
 
-  <!-- Tailwind CSS CDN -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
-    .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-    .card-hover { transition: all 0.3s; }
-    .card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+    .card-hover{ transition: all .28s; }
+    .card-hover:hover{ transform: translateY(-6px); box-shadow: 0 18px 35px rgba(11,18,32,0.08); }
+    .h1-gradient { background: linear-gradient(90deg,#052B5F,#0b6b9a); -webkit-background-clip: text; background-clip:text; color:transparent; }
+    /* small helpers */
+    .muted{ color:#6b7280; }
   </style>
-</head>
-<body class="font-sans antialiased text-gray-800">
 
-  <!-- Floating WhatsApp & Call -->
-  <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
-    <a href="https://wa.me/919876543210" target="_blank" class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg">
-      <i class="fab fa-whatsapp text-3xl"></i>
+  <!-- FAQ JSON-LD will be included right before </head> -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"How long does company registration take?","acceptedAnswer":{"@type":"Answer","text":"Typically 5–10 business days after documents submission, depending on name approval."}},
+      {"@type":"Question","name":"Is DSC and DIN included?","acceptedAnswer":{"@type":"Answer","text":"Yes — our packages include 2 DIN and 2 Class-3 DSC where applicable."}},
+      {"@type":"Question","name":"Will you help open a bank account?","acceptedAnswer":{"@type":"Answer","text":"Yes, our Standard and Premium packages include bank account opening assistance."}}
+    ]
+  }
+  </script>
+</head>
+<body class="antialiased text-gray-800 font-sans">
+
+  <!-- Floating CTA: WhatsApp + Call -->
+  <div class="fixed right-6 bottom-6 flex flex-col gap-3 z-50">
+    <a href="https://wa.me/919514327271" target="_blank" class="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg">
+      <i class="fab fa-whatsapp text-2xl"></i>
     </a>
-    <a href="tel:+919876543210" class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg">
-      <i class="fas fa-phone text-3xl"></i>
+    <a href="tel:+919514327271" class="bg-blue-600 hover:bg-blue-700 text-white rounded-full p-4 shadow-lg">
+      <i class="fas fa-phone text-2xl"></i>
     </a>
   </div>
 
-  <!-- Hero Section -->
-  <header class="gradient-bg text-white py-20">
-    <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6">
-        Start Your Business in Just <span class="text-yellow-300">7 Days</span>
-      </h1>
-      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-        Company Registration • LLP • GST • ITR Filing • Trademark at Lowest Price Guaranteed
-      </p>
-      <div class="flex flex-wrap justify-center gap-4 mb-10">
-      </div>
-      <a href="#packages" class="bg-yellow-400 text-gray-900 font-bold py-4 px-10 rounded-lg text-xl hover:bg-yellow-300 transition">
-        Get Started Now → 
+  <!-- Top bar / Nav -->
+  <header class="bg-white shadow-sm sticky top-0 z-40">
+    <div class="container mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <img src="/logo.svg" alt="Vidwaan Consultancy" class="w-12 h-12 rounded-lg"/>
+        <div>
+          <div class="text-lg font-bold text-slate-800">Vidwaan Consultancy</div>
+          <div class="text-sm muted">Tax • Accounting • Registration</div>
+        </div>
       </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold">
+        <a href="/company-registration" class="hover:text-blue-600">Company Registration</a>
+        <a href="/gst-registration" class="hover:text-blue-600">GST</a>
+        <a href="/itr-filing" class="hover:text-blue-600">ITR</a>
+        <a href="/trademark" class="hover:text-blue-600">Trademark</a>
+        <a href="/pricing" class="hover:text-blue-600">Pricing</a>
+        <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Packages Section -->
-  <section id="packages" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-4">Choose Your Company Registration Package</h2>
-      <p class="text-center text-gray-600 text-lg mb-12">All packages include Govt Fees + Free Consultation</p>
+  <!-- HERO with right-hand lead form -->
+  <section class="bg-gradient-to-b from-[#f6f9ff] to-white py-20">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8 items-start">
+      <!-- Left copy -->
+      <div>
+        <div class="text-sm text-teal-600 font-semibold">Company Registration • GST • ITR • Accounting</div>
+        <h1 class="mt-4 text-3xl md:text-5xl font-extrabold leading-tight">
+          <span class="h1-gradient">Simplify your business journey.</span><br/>
+          We handle accounting, tax & registrations so you can focus on growth.
+        </h1>
+        <p class="mt-6 text-lg muted max-w-2xl">Fast company / LLP registration, PAN & TAN, GST registration, bookkeeping and complete compliance for startups, SMEs and professionals in Bangalore & Hyderabad.</p>
 
-      <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        <!-- Basic -->
-        <div class="border-2 border-gray-200 rounded-2xl p-8 card-hover">
-          <h3 class="text-2xl font-bold mb-4">Basic</h3>
-          <p class="text-4xl font-bold mb-6">₹5,999 <span class="text-sm font-normal text-gray-500 line-through">₹12,000</span></p>
-          <ul class="space-y-4 mb-8">
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Name Approval</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> 2 DIN + 2 DSC</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> MOA + AOA</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> PAN + TAN</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Incorporation Certificate</li>
-            <li class="text-gray-400"><i class="fas fa-times mr-2"></i> Bank Account Opening</li>
-          </ul>
-          <a href="https://wa.me/919876543210?text=Hi,%20I%20want%20Basic%20Company%20Registration%20Package" class="block text-center bg-gray-800 text-white py-4 rounded-lg font-bold hover:bg-gray-900">
-            Choose Basic
-          </a>
+        <!-- Trust bar -->
+        <div class="mt-8 flex items-center gap-6">
+          <div class="text-sm muted">Trusted by</div>
+          <img src="/assets/images/trust-1.png" alt="client" class="h-8 opacity-90" />
+          <img src="/assets/images/trust-2.png" alt="client" class="h-8 opacity-90" />
+          <img src="/assets/images/trust-3.png" alt="client" class="h-8 opacity-90" />
         </div>
 
-        <!-- Standard (Most Popular) -->
-        <div class="border-4 border-blue-600 rounded-2xl p-8 card-hover relative transform scale-105">
-          <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-red-600 text-white px-6 py-1 rounded-full text-sm font-bold">
-            MOST POPULAR
+        <!-- quick features -->
+        <div class="mt-8 grid grid-cols-2 gap-4 max-w-md">
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <div class="font-bold">Free 10-min consultation</div>
+            <div class="text-sm muted">No charges to discuss requirements</div>
           </div>
-          <h3 class="text-2xl font-bold mb-4">Standard</h3>
-          <p class="text-4xl font-bold mb-6">₹9,999 <span class="text-sm font-normal text-gray-500 line-through">₹18,000</span></p>
-          <ul class="space-y-4 mb-8">
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Everything in Basic</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Bank Account Opening Support</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> GST Registration</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> 3 Months Free Accounting</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Commencement of Business Filing</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Free 1 Year Consultation</li>
+          <div class="bg-white rounded-lg p-4 shadow-sm">
+            <div class="font-bold">Transparent Pricing</div>
+            <div class="text-sm muted">No hidden fees — govt + service</div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex gap-4">
+          <a href="#packages" class="bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-300">Get Started</a>
+          <a href="https://wa.me/919514327271" target="_blank" class="border border-slate-200 px-6 py-3 rounded-lg">Chat on WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Right form card -->
+      <aside class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-xl font-bold">Quick Enquiry</h3>
+        <p class="text-sm muted">Fill details — we’ll call within 30 minutes</p>
+
+        <!-- Formspree: replace YOUR_FORMSPREE_ID -->
+        <form id="leadForm" class="mt-4 space-y-3" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+          <input name="name" required class="w-full border rounded-lg p-3" placeholder="Full name" />
+          <input name="phone" required class="w-full border rounded-lg p-3" placeholder="Phone / WhatsApp" />
+          <input name="email" class="w-full border rounded-lg p-3" placeholder="Email (optional)" />
+          <select name="service" class="w-full border rounded-lg p-3">
+            <option>Company / LLP Registration</option>
+            <option>GST Registration</option>
+            <option>ITR Filing</option>
+            <option>Accounting</option>
+          </select>
+          <textarea name="message" rows="3" class="w-full border rounded-lg p-3" placeholder="Quick note (optional)"></textarea>
+
+          <div class="flex gap-3">
+            <button class="bg-blue-600 text-white rounded-lg px-4 py-2 font-semibold w-full">Request Callback</button>
+            <a href="tel:+919514327271" class="bg-gray-100 px-4 py-2 rounded-lg w-36 text-center text-slate-700">Call</a>
+          </div>
+
+          <p class="text-xs muted mt-2">Or chat on WhatsApp: <a href="https://wa.me/919514327271" class="text-blue-600">+91 95143 27271</a></p>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+  <!-- How it works (3 steps) -->
+  <section class="py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center">How it works</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow text-center">
+          <div class="w-16 h-16 rounded-full bg-blue-600 text-white mx-auto flex items-center justify-center text-2xl font-bold">1</div>
+          <h3 class="mt-4 font-bold">Talk to our expert</h3>
+          <p class="muted mt-2">Free 10-minute consultation to understand requirements</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow text-center">
+          <div class="w-16 h-16 rounded-full bg-blue-600 text-white mx-auto flex items-center justify-center text-2xl font-bold">2</div>
+          <h3 class="mt-4 font-bold">Submit documents</h3>
+          <p class="muted mt-2">Secure upload & verification</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow text-center">
+          <div class="w-16 h-16 rounded-full bg-blue-600 text-white mx-auto flex items-center justify-center text-2xl font-bold">3</div>
+          <h3 class="mt-4 font-bold">We file & deliver</h3>
+          <p class="muted mt-2">We handle filings and send certificates</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three main service boxes -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg p-6 shadow card-hover">
+          <h3 class="text-xl font-bold">Business Setup & Compliance</h3>
+          <p class="muted mt-2">Start your business right with seamless company registrations (LLP, Pvt. Ltd.) and essential compliance like GST, PAN, and PF/ESI.</p>
+          <a href="/services#company" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow card-hover">
+          <h3 class="text-xl font-bold">Core Accounting & Taxation</h3>
+          <p class="muted mt-2">Keep your books clean and your taxes low with expert bookkeeping, financial reporting, and accurate ITR and GST return filing.</p>
+          <a href="/services#accounting" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow card-hover">
+          <h3 class="text-xl font-bold">Audit & Assurance</h3>
+          <p class="muted mt-2">Gain clarity and trust with independent assurance services, providing transparent financial oversight for better decision-making.</p>
+          <a href="/services#audit" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages (Pricing) -->
+  <section id="packages" class="py-16">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center">Choose your package</h2>
+      <p class="muted text-center mt-3">Govt fees included. Transparent pricing — no hidden costs.</p>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <!-- Basic -->
+        <div class="border rounded-xl p-6 text-center card-hover">
+          <h4 class="font-bold text-xl">Basic</h4>
+          <div class="text-3xl font-extrabold mt-4">₹5,999</div>
+          <ul class="mt-4 text-left space-y-2 muted text-sm">
+            <li>✔ Name approval</li>
+            <li>✔ PAN & TAN</li>
+            <li>✔ Incorporation certificate</li>
           </ul>
-          <a href="https://wa.me/919876543210?text=Hi,%20I%20want%20Standard%20Company%20Registration%20Package" class="block text-center bg-blue-600 text-white py-4 rounded-lg font-bold hover:bg-blue-700">
-            Choose Standard
-          </a>
+          <a href="https://wa.me/919514327271?text=I%20want%20Basic%20Package" class="mt-6 inline-block bg-gray-900 text-white px-6 py-3 rounded-lg">Choose Basic</a>
+        </div>
+
+        <!-- Standard -->
+        <div class="border-2 border-blue-600 rounded-xl p-6 text-center card-hover transform scale-102">
+          <h4 class="font-bold text-xl">Standard</h4>
+          <div class="text-3xl font-extrabold mt-4">₹9,999</div>
+          <ul class="mt-4 text-left space-y-2 muted text-sm">
+            <li>✔ Everything in Basic</li>
+            <li>✔ Bank account support</li>
+            <li>✔ GST registration</li>
+          </ul>
+          <a href="https://wa.me/919514327271?text=I%20want%20Standard%20Package" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg">Choose Standard</a>
         </div>
 
         <!-- Premium -->
-        <div class="border-2 border-gray-200 rounded-2xl p-8 card-hover">
-          <h3 class="text-2xl font-bold mb-4">Premium</h3>
-          <p class="text-4xl font-bold mb-6">₹14,999 <span class="text-sm font-normal text-gray-500 line-through">₹25,000</span></p>
-          <ul class="space-y-4 mb-8">
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Everything in Standard</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Trademark Filing</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> 1 Year GST Return Filing</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> MSME + IEC Registration</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Dedicated CA for 1 Year</li>
-            <li><i class="fas fa-check text-green-500 mr-2"></i> Priority Support</li>
+        <div class="border rounded-xl p-6 text-center card-hover">
+          <h4 class="font-bold text-xl">Premium</h4>
+          <div class="text-3xl font-extrabold mt-4">₹14,999</div>
+          <ul class="mt-4 text-left space-y-2 muted text-sm">
+            <li>✔ Everything in Standard</li>
+            <li>✔ Trademark filing</li>
+            <li>✔ 1 year GST filing</li>
           </ul>
-          <a href="https://wa.me/919876543210?text=Hi,%20I%20want%20Premium%20Company%20Registration%20Package" class="block text-center bg-gradient-bg text-white py-4 rounded-lg font-bold">
-            Choose Premium
-          </a>
+          <a href="https://wa.me/919514327271?text=I%20want%20Premium%20Package" class="mt-6 inline-block bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white px-6 py-3 rounded-lg">Choose Premium</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Process -->
-  <section class="py-20 bg-gray-50">
+  <!-- Documents required -->
+  <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">How It Works – Just 3 Simple Steps</h2>
-      <div class="grid md:grid-cols-3 gap-10">
-        <div class="text-center">
-          <div class="bg-blue-600 text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">1</div>
-          <h3 class="text-2xl font-bold mb-4">Share Requirements</h3>
-          <p>Call or WhatsApp us your details</p>
+      <h2 class="text-3xl font-bold text-center">Documents Required</h2>
+      <div class="mt-8 grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white p-6 rounded-lg text-center shadow">
+          <i class="fas fa-id-card text-blue-600 text-2xl"></i>
+          <div class="mt-3 font-semibold">PAN & Aadhaar</div>
         </div>
-        <div class="text-center">
-          <div class="bg-blue-600 text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">2</div>
-          <h3 class="text-2xl font-bold mb-4">We Prepare & File</h3>
-          <p>Our experts handle everything</p>
+        <div class="bg-white p-6 rounded-lg text-center shadow">
+          <i class="fas fa-image text-blue-600 text-2xl"></i>
+          <div class="mt-3 font-semibold">Passport photo</div>
         </div>
-        <div class="text-center">
-          <div class="bg-blue-600 text-white w-20 h-20 rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6">3</div>
-          <h3 class="text-2xl font-bold mb-4">Get Certificate</h3>
-          <p>Company registered in 7 days!</p>
+        <div class="bg-white p-6 rounded-lg text-center shadow">
+          <i class="fas fa-home text-blue-600 text-2xl"></i>
+          <div class="mt-3 font-semibold">Rent agreement + NOC</div>
+        </div>
+        <div class="bg-white p-6 rounded-lg text-center shadow">
+          <i class="fas fa-bolt text-blue-600 text-2xl"></i>
+          <div class="mt-3 font-semibold">Electricity bill</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Documents Required -->
-  <section class="py-20">
+  <!-- FAQ accordion -->
+  <section class="py-16">
+    <div class="container mx-auto px-6 max-w-3xl">
+      <h2 class="text-3xl font-bold text-center">Frequently asked questions</h2>
+      <div class="mt-6 space-y-4">
+        <details class="bg-white p-5 rounded-lg shadow"><summary class="font-semibold cursor-pointer">How long does company registration take?</summary><div class="mt-3 muted">Usually 7–10 working days after documents are submitted.</div></details>
+        <details class="bg-white p-5 rounded-lg shadow"><summary class="font-semibold cursor-pointer">Is DSC/DIN included?</summary><div class="mt-3 muted">Yes — packages include 2 DIN and 2 Class-3 DSC if needed.</div></details>
+        <details class="bg-white p-5 rounded-lg shadow"><summary class="font-semibold cursor-pointer">Do you handle GST registration?</summary><div class="mt-3 muted">Yes — GST registration and monthly filings are available under our packages.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / CTA -->
+  <section id="contact" class="py-16 bg-blue-50">
     <div class="container mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-8">Documents Required</h2>
-      <div class="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto text-left">
-        <div class="bg-gray-100 p-6 rounded-lg"><i class="fas fa-id-card text-blue-600 text-2xl mb-3"></i> PAN & Aadhaar of Directors</div>
-        <div class="bg-gray-100 p-6 rounded-lg"><i class="fas fa-image text-blue-600 text-2xl mb-3"></i> Passport Size Photo</div>
-        <div class="bg-gray-100 p-6 rounded-lg"><i class="fas fa-home text-blue-600 text-2xl mb-3"></i> Rent Agreement + NOC</div>
-        <div class="bg-gray-100 p-6 rounded-lg"><i class="fas fa-lightbulb text-blue-600 text-2xl mb-3"></i> Electricity Bill</div>
-      </div>
-    </div>
-  </section>
+      <h2 class="text-3xl font-bold">Get Free Consultation Today</h2>
+      <p class="muted mt-2">Trusted by startups and SMEs — we protect time and keep compliance simple.</p>
 
-  <!-- FAQ -->
-  <section class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6 max-w-4xl">
-      <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-      <div class="space-y-6">
-        <details class="bg-white p-6 rounded-lg shadow">
-          <summary class="font-bold text-lg cursor-pointer">How long does company registration take?</summary>
-          <p class="mt-4 text-gray-600">Usually 7–10 working days after documents submission.</p>
-        </details>
-        <details class="bg-white p-6 rounded-lg shadow">
-          <summary class="font-bold text-lg cursor-pointer">Is DSC and DIN included?</summary>
-          <p class="mt-4 text-gray-600">Yes, all packages include 2 DIN + 2 Class-3 DSC.</p>
-        </details>
-        <!-- Add more FAQs as needed -->
+      <div class="mt-6 max-w-2xl mx-auto">
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="grid grid-cols-1 gap-4">
+          <input type="text" name="name" required placeholder="Your name" class="p-4 rounded-lg border" />
+          <input type="tel" name="phone" required placeholder="Phone number" class="p-4 rounded-lg border" />
+          <input type="email" name="email" placeholder="Email (optional)" class="p-4 rounded-lg border" />
+          <select name="service" class="p-4 rounded-lg border">
+            <option>Company Registration</option>
+            <option>GST Registration</option>
+            <option>ITR Filing</option>
+            <option>Trademark</option>
+          </select>
+          <button type="submit" class="bg-blue-600 text-white py-3 rounded-lg font-bold">Get Free Callback</button>
+        </form>
       </div>
-    </div>
-  </section>
 
-  <!-- Contact Form -->
-  <section class="py-20 bg-blue-50">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-8">Get Free Consultation Today</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="max-w-2xl mx-auto space-y-6">
-        <input type="text" name="name" placeholder="Your Name" required class="w-full p-4 rounded-lg border">
-        <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-4 rounded-lg border">
-        <input type="email" name="email" placeholder="Email (Optional)" class="w-full p-4 rounded-lg border">
-        <select name="service" class="w-full p-4 rounded-lg border">
-          <option>Company Registration</option>
-          <option>GST Registration</option>
-          <option>ITR Filing</option>
-          <option>Trademark</option>
-        </select>
-        <button type="submit" class="bg-blue-600 text-white py-4 px-12 rounded-lg text-xl font-bold hover:bg-blue-700">
-          Get Free Callback
-        </button>
-      </form>
-      <p class="mt-6 text-gray-600">We respect your privacy • 100% secure</p>
+      <p class="muted mt-4">Or call us at <a href="tel:+919514327271" class="text-blue-600">+91 95143 27271</a> • Email: <a href="mailto:info@vidwaanconsultancy.com" class="text-blue-600">info@vidwaanconsultancy.com</a></p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12">
+  <footer class="bg-gray-900 text-white py-10">
     <div class="container mx-auto px-6 text-center">
-      <h3 class="text-3xl font-bold mb-4">Vidwaan Consultancy</h3>
-      <p class="mb-6">Your Trusted Partner for All Business Compliances</p>
-      <p>Call: +91 98765 43210 | Email: info@vidwaanconsultancy.com</p>
-      <p class="mt-6">&copy; 2025 Vidwaan Consultancy. All rights reserved.</p>
+      <div class="grid md:grid-cols-3 gap-6 items-start">
+        <div>
+          <img src="/logo.svg" alt="Vidwaan Logo" class="w-14 h-14 mx-auto md:mx-0"/>
+          <div class="mt-3 font-semibold">Vidwaan Consultancy</div>
+          <div class="muted text-sm">Bangalore & Hyderabad</div>
+        </div>
+        <div class="muted text-sm">
+          <div class="font-semibold mb-2">Services</div>
+          <div><a href="/company-registration" class="hover:underline">Company Registration</a></div>
+          <div><a href="/gst-registration" class="hover:underline">GST Registration</a></div>
+          <div><a href="/itr-filing" class="hover:underline">ITR Filing</a></div>
+        </div>
+        <div class="muted text-sm">
+          <div class="font-semibold mb-2">Contact</div>
+          <div>Phone: <a href="tel:+919514327271" class="text-blue-400">+91 95143 27271</a></div>
+          <div>Email: <a href="mailto:info@vidwaanconsultancy.com" class="text-blue-400">info@vidwaanconsultancy.com</a></div>
+        </div>
+      </div>
+
+      <div class="mt-6 muted text-sm">&copy; <span id="year"></span> Vidwaan Consultancy. All rights reserved.</div>
     </div>
   </footer>
+
+  <!-- Optional: Analytics placeholder -->
+  <!-- Paste your Google Analytics or GA4 tag here -->
+
+  <script>
+    // set year
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    // fallback to mailto if Formspree not configured
+    const leadForm = document.getElementById('leadForm');
+    leadForm.addEventListener('submit', function(e){
+      // if action contains YOUR_FORMSPREE_ID, allow normal post else redirect to mailto
+      const action = leadForm.getAttribute('action') || '';
+      if(action.includes('YOUR_FORMSPREE_ID')){
+        // formspree will handle submission
+        return true;
+      } else {
+        e.preventDefault();
+        const form = e.target;
+        const name = encodeURIComponent(form.name.value || '');
+        const phone = encodeURIComponent(form.phone.value || '');
+        const email = encodeURIComponent(form.email.value || '');
+        const service = encodeURIComponent(form.service.value || '');
+        const msg = encodeURIComponent(form.message ? form.message.value : '');
+        const subject = encodeURIComponent('New enquiry from website: ' + service + ' — ' + name);
+        const body = 'Name: ' + name + '%0APhone: ' + phone + '%0AEmail: ' + email + '%0AService: ' + service + '%0A%0A' + msg;
+        window.location.href = 'mailto:info@vidwaanconsultancy.com?subject=' + subject + '&body=' + body;
+      }
+    });
+  </script>
 </body>
 </html>
