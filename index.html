@@ -1,856 +1,399 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-export const Contact = () => {
-  const handleWhatsApp = () => {
-    window.open("https://wa.me/919876543210?text=Hi, I need consultation about your services", "_blank");
-  };
+  <title>Vidwaan Consultancy — Company Registration, GST & ITR Filing</title>
+  <meta name="description" content="Register your Company/LLP, get GST & ITR filing, ROC compliance and audit services. Starting from ₹5,999. 7-day delivery and free expert consultation.">
 
-  const handleCall = () => {
-    window.location.href = "tel:+919876543210";
-  };
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-primary via-primary to-[hsl(250,65%,45%)] relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
-      
-      <div className="container px-4 md:px-6 relative z-10">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12 space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold text-white">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-white/90">
-              Get free consultation from our expert team
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-8 space-y-6">
-                <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-center gap-4 text-white">
-                    <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
-                      <Phone className="w-5 h-5 text-accent-foreground" />
-                    </div>
-                    <div>
-                      <p className="font-semibold">Phone</p>
-                      <a href="tel:+919876543210" className="hover:underline">+91 98765 43210</a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4 text-white">
-                    <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
-                      <Mail className="w-5 h-5 text-accent-foreground" />
-                    </div>
-                    <div>
-                      <p className="font-semibold">Email</p>
-                      <a href="mailto:info@vidwaanconsultancy.com" className="hover:underline">info@vidwaanconsultancy.com</a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-4 text-white">
-                    <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shrink-0">
-                      <MapPin className="w-5 h-5 text-accent-foreground" />
-                    </div>
-                    <div>
-                      <p className="font-semibold">Office</p>
-                      <p className="text-white/90">India</p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-8 flex flex-col justify-center">
-                <h3 className="text-2xl font-semibold text-white mb-6">Quick Connect</h3>
-                <p className="text-white/90 mb-8">
-                  Connect with us instantly through WhatsApp or give us a call. Our team is ready to assist you.
-                </p>
-                
-                <div className="space-y-4">
-                  <Button 
-                    onClick={handleWhatsApp}
-                    size="lg"
-                    className="w-full bg-accent text-accent-foreground hover:bg-accent/90 text-lg py-6 group"
-                  >
-                    <MessageCircle className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                    Chat on WhatsApp
-                  </Button>
-
-                  <Button 
-                    onClick={handleCall}
-                    size="lg"
-                    variant="outline"
-                    className="w-full bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm text-lg py-6"
-                  >
-                    <Phone className="w-5 h-5 mr-2" />
-                    Call Now
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center">
-            <p className="text-white/80 text-sm">
-              Business Hours: Monday - Saturday, 10:00 AM - 7:00 PM
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-
-export const Hero = () => {
-  const handleWhatsApp = () => {
-    window.open("https://wa.me/919876543210?text=Hi, I want to know more about your services", "_blank");
-  };
-
-  return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-primary to-[hsl(250,65%,45%)]">
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
-      
-      <div className="container relative z-10 px-4 md:px-6">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-          <div className="inline-block px-4 py-2 bg-accent/90 text-accent-foreground rounded-full text-sm font-semibold mb-4 shadow-lg">
-            ✓ Trusted by 1000+ Businesses
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            Register Your Company in
-            <span className="block text-accent mt-2">Just 7 Days</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto">
-            Starting at Only <span className="font-bold text-accent">₹5,999</span> (All Govt Fees Included)
-          </p>
-          
-          <div className="flex flex-wrap gap-3 justify-center text-white/80 text-sm md:text-base">
-            <span>Private Limited</span>
-            <span>•</span>
-            <span>LLP</span>
-            <span>•</span>
-            <span>OPC</span>
-            <span>•</span>
-            <span>GST</span>
-            <span>•</span>
-            <span>ITR</span>
-            <span>•</span>
-            <span>Trademark</span>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button 
-              size="lg" 
-              onClick={handleWhatsApp}
-              className="bg-accent text-accent-foreground hover:bg-accent/90 shadow-2xl hover:shadow-accent/50 transition-all duration-300 text-lg px-8 py-6 group"
-            >
-              Start Registration
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm text-lg px-8 py-6"
-            >
-              Explore Services
-            </Button>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-8 pt-8 text-white/70 text-sm">
-            <div className="flex items-center gap-2">
-              <span className="text-accent text-xl">✓</span>
-              <span>Zero Hidden Charges</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-accent text-xl">✓</span>
-              <span>Free Expert Consultation</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-accent text-xl">✓</span>
-              <span>7-Day Delivery Guarantee</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
-    </section>
-  );
-};
-
-import { Button } from "@/components/ui/button";
-import { Menu, X, User } from "lucide-react";
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { useNavigate } from "react-router-dom";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
-export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { user, signOut } = useAuth();
-  const navigate = useNavigate();
-
-  const navLinks = [
-    { name: "Home", href: "#" },
-    { name: "Services", href: "#services" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Contact", href: "#contact" },
-  ];
-
-  const scrollToSection = (href: string) => {
-    if (href === "#") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      const element = document.querySelector(href);
-      element?.scrollIntoView({ behavior: "smooth" });
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#4f46e5",
+            primaryDark: "#4338ca",
+            accent: "#facc15",
+          }
+        }
+      }
     }
-    setIsOpen(false);
-  };
+  </script>
 
-  return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
-      <div className="container px-4 md:px-6">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">V</span>
-            </div>
-            <span className="text-xl md:text-2xl font-bold text-primary">
-              Vidwaan Consultancy
-            </span>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    .card-hover { transition: all .25s; }
+    .card-hover:hover { transform: translateY(-6px); box-shadow: 0 18px 30px rgba(15,23,42,0.15); }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 antialiased">
+
+  <!-- Floating Call & WhatsApp -->
+  <div class="fixed right-4 bottom-4 flex flex-col gap-3 z-50">
+    <a href="https://wa.me/919514327271?text=Hi,%20I%20need%20help%20with%20company%20registration" target="_blank" class="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg flex items-center justify-center">
+      <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+    <a href="tel:+919514327271" class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg flex items-center justify-center">
+      <i class="fas fa-phone text-2xl"></i>
+    </a>
+  </div>
+
+  <!-- NAVBAR -->
+  <header class="bg-white/90 backdrop-blur sticky top-0 z-40 border-b border-slate-100">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-bold text-xl">V</div>
+        <div>
+          <div class="font-bold text-lg">Vidwaan Consultancy</div>
+          <div class="text-xs text-slate-500">Bangalore & Hyderabad</div>
+        </div>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700">
+        <button onclick="scrollToId('hero')" class="hover:text-primary">Home</button>
+        <button onclick="scrollToId('services')" class="hover:text-primary">Services</button>
+        <button onclick="scrollToId('pricing')" class="hover:text-primary">Pricing</button>
+        <button onclick="scrollToId('contact')" class="hover:text-primary">Contact</button>
+        <a href="tel:+919514327271" class="bg-primary text-white px-4 py-2 rounded-lg text-sm hover:bg-primaryDark">
+          Call Now
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="bg-gradient-to-br from-primary to-indigo-800 text-white py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-block px-3 py-1 bg-white/10 rounded-full text-xs font-semibold mb-3">
+          ✓ Trusted by startups & small businesses
+        </div>
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
+          Register your company in
+          <span class="text-accent block mt-1">just 7 days</span>
+        </h1>
+        <p class="text-lg text-slate-100 mb-6">
+          Private Limited, LLP, GST, ITR, ROC & Audit — everything handled by the Vidwaan team so you can focus on growth.
+        </p>
+
+        <div class="flex flex-wrap gap-3 text-sm text-slate-100 mb-6">
+          <span>Private Limited</span><span>•</span>
+          <span>LLP</span><span>•</span>
+          <span>GST</span><span>•</span>
+          <span>ITR</span><span>•</span>
+          <span>ROC</span><span>•</span>
+          <span>Audit</span>
+        </div>
+
+        <div class="flex flex-wrap gap-4 mb-4">
+          <button onclick="scrollToId('pricing')" class="bg-accent text-slate-900 font-bold px-6 py-3 rounded-lg text-sm md:text-base hover:bg-yellow-300">
+            View Packages
+          </button>
+          <a href="https://wa.me/919514327271?text=Hi,%20I%20want%20to%20start%20company%20registration" target="_blank" class="border border-white/60 px-6 py-3 rounded-lg text-sm md:text-base">
+            Chat on WhatsApp
+          </a>
+        </div>
+
+        <div class="flex flex-wrap gap-5 text-sm text-slate-100">
+          <div class="flex items-center gap-2">
+            <span class="text-accent text-lg">✓</span> Zero hidden charges
           </div>
-
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.href)}
-                className="text-foreground/70 hover:text-primary transition-colors font-medium"
-              >
-                {link.name}
-              </button>
-            ))}
-            
-            {user ? (
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" size="icon" className="rounded-full">
-                    <User className="h-5 w-5" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  <DropdownMenuItem onClick={() => navigate('/profile')}>
-                    My Profile
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem onClick={signOut}>
-                    Logout
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
-              <Button 
-                onClick={() => navigate('/auth')}
-                className="bg-accent text-accent-foreground hover:bg-accent/90"
-              >
-                Login / Sign Up
-              </Button>
-            )}
+          <div class="flex items-center gap-2">
+            <span class="text-accent text-lg">✓</span> Free expert consultation
           </div>
+          <div class="flex items-center gap-2">
+            <span class="text-accent text-lg">✓</span> 7-day delivery target
+          </div>
+        </div>
+      </div>
 
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      <!-- Hero Form -->
+      <div class="bg-white text-slate-900 rounded-2xl p-6 shadow-2xl">
+        <h2 class="text-xl font-bold mb-1">Get a free callback</h2>
+        <p class="text-sm text-slate-500 mb-4">Share your details — our team will call within a short time.</p>
+
+        <form id="leadForm" class="space-y-3">
+          <input required name="name" class="w-full border rounded-lg px-3 py-2 text-sm" placeholder="Full name" />
+          <input required name="phone" class="w-full border rounded-lg px-3 py-2 text-sm" placeholder="Phone / WhatsApp" />
+          <input name="email" type="email" class="w-full border rounded-lg px-3 py-2 text-sm" placeholder="Email (optional)" />
+          <select name="service" class="w-full border rounded-lg px-3 py-2 text-sm">
+            <option>Company / LLP Registration</option>
+            <option>GST Registration</option>
+            <option>ITR Filing</option>
+            <option>Accounting / Bookkeeping</option>
+            <option>Audit Services</option>
+          </select>
+          <textarea name="message" class="w-full border rounded-lg px-3 py-2 text-sm" rows="3" placeholder="Tell us what you need (optional)"></textarea>
+
+          <button class="w-full bg-primary text-white py-2.5 rounded-lg text-sm font-semibold hover:bg-primaryDark">
+            Request Callback
+          </button>
+        </form>
+
+        <p class="text-xs text-slate-500 mt-3">
+          Or call directly: <a href="tel:+919514327271" class="text-blue-600 font-semibold">+91 95143 27271</a><br/>
+          Email: <a href="mailto:info@vidwaanconsultancy.com" class="text-blue-600 font-semibold">info@vidwaanconsultancy.com</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES (3 main boxes) -->
+  <section id="services" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-3">Our core services</h2>
+      <p class="text-center text-slate-600 mb-10 max-w-2xl mx-auto">
+        End-to-end support from company setup to ongoing accounting, compliance and audit.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-slate-50 rounded-xl p-6 card-hover">
+          <h3 class="text-xl font-bold mb-2">Business Setup & Compliance</h3>
+          <p class="text-slate-600 text-sm mb-4">
+            Company/LLP registration, GST, PAN, TAN and PF/ESI registration with complete documentation support.
+          </p>
+          <ul class="text-sm text-slate-600 space-y-1 mb-4">
+            <li>• Pvt Ltd, LLP & OPC incorporation</li>
+            <li>• PAN, TAN & GST registrations</li>
+            <li>• Basic legal documentation</li>
+          </ul>
+          <button onclick="scrollToId('pricing')" class="text-sm font-semibold text-blue-600">
+            Learn more →
           </button>
         </div>
 
-        {isOpen && (
-          <div className="md:hidden py-4 space-y-4 border-t border-border/50">
-            {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => scrollToSection(link.href)}
-                className="block w-full text-left py-2 text-foreground/70 hover:text-primary transition-colors font-medium"
-              >
-                {link.name}
-              </button>
-            ))}
-            {user ? (
-              <>
-                <Button 
-                  onClick={() => {
-                    navigate('/profile');
-                    setIsOpen(false);
-                  }}
-                  variant="outline"
-                  className="w-full"
-                >
-                  My Profile
-                </Button>
-                <Button 
-                  onClick={() => {
-                    signOut();
-                    setIsOpen(false);
-                  }}
-                  variant="outline"
-                  className="w-full"
-                >
-                  Logout
-                </Button>
-              </>
-            ) : (
-              <Button 
-                onClick={() => {
-                  navigate('/auth');
-                  setIsOpen(false);
-                }}
-                className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
-              >
-                Login / Sign Up
-              </Button>
-            )}
-          </div>
-        )}
-      </div>
-    </nav>
-  );
-};
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Check } from "lucide-react";
-
-const pricingPlans = [
-  {
-    name: "Basic",
-    price: "5,999",
-    originalPrice: "12,000",
-    popular: false,
-    features: [
-      "Name Approval (2 Options)",
-      "2 Director Identification Numbers (DIN)",
-      "2 Digital Signatures (Class-3 DSC)",
-      "Memorandum & Articles of Association",
-      "Company PAN + TAN",
-      "Incorporation Certificate",
-      "Bank Account Opening",
-    ],
-  },
-  {
-    name: "Standard",
-    price: "9,999",
-    originalPrice: "18,000",
-    popular: true,
-    features: [
-      "Everything in Basic Package",
-      "GST Registration Included",
-      "Bank Account Opening Assistance",
-      "3 Months Free Accounting & Bookkeeping",
-      "Commencement of Business Filing",
-      "Free Consultation for 1 Year",
-      "Share Certificates (Physical + Digital)",
-    ],
-  },
-  {
-    name: "Premium",
-    price: "14,999",
-    originalPrice: "28,000",
-    popular: false,
-    features: [
-      "Everything in Standard Package",
-      "Trademark Filing (1 Class)",
-      "1 Year GST Return Filing",
-      "MSME + Import Export Code (IEC)",
-      "Dedicated CA Support for 1 Year",
-      "Priority Processing (5 Days)",
-      "First Board Resolution + Minutes",
-    ],
-  },
-];
-
-export const Pricing = () => {
-  const handleWhatsApp = (plan: string, price: string) => {
-    window.open(`https://wa.me/919876543210?text=Hi, I want ${plan} Company Registration ₹${price}`, "_blank");
-  };
-
-  return (
-    <section className="py-20 bg-background">
-      <div className="container px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground">
-            Private Limited Company Registration Packages
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Choose the perfect plan — All include Government Fees, DIN, DSC, MOA/AOA, PAN/TAN
+        <div class="bg-slate-50 rounded-xl p-6 card-hover">
+          <h3 class="text-xl font-bold mb-2">Core Accounting & Taxation</h3>
+          <p class="text-slate-600 text-sm mb-4">
+            Monthly bookkeeping, GST & ITR filings with proper tax planning and reports for your business.
           </p>
+          <ul class="text-sm text-slate-600 space-y-1 mb-4">
+            <li>• Books of accounts & MIS</li>
+            <li>• GST returns & reconciliation</li>
+            <li>• ITR for individuals & firms</li>
+          </ul>
+          <button onclick="scrollToId('contact')" class="text-sm font-semibold text-blue-600">
+            Talk to an expert →
+          </button>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-          {pricingPlans.map((plan, index) => (
-            <Card 
-              key={index}
-              className={`relative hover:shadow-2xl transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-primary border-2 shadow-xl scale-105' 
-                  : 'border-border hover:border-primary/50'
-              }`}
-            >
-              {plan.popular && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground">
-                  MOST POPULAR
-                </Badge>
-              )}
-              
-              <CardHeader className="text-center pb-8 pt-8">
-                <CardTitle className="text-2xl mb-4">{plan.name}</CardTitle>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-center gap-2">
-                    <span className="text-4xl md:text-5xl font-bold text-foreground">₹{plan.price}</span>
-                  </div>
-                  <div className="text-muted-foreground line-through text-lg">
-                    ₹{plan.originalPrice}
-                  </div>
-                </div>
-              </CardHeader>
-
-              <CardContent className="space-y-6">
-                <ul className="space-y-3">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Button 
-                  onClick={() => handleWhatsApp(plan.name, plan.price)}
-                  className={`w-full text-base py-6 ${
-                    plan.popular 
-                      ? 'bg-accent text-accent-foreground hover:bg-accent/90' 
-                      : 'bg-primary text-primary-foreground hover:bg-primary/90'
-                  }`}
-                >
-                  Choose {plan.name}
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-6 mt-12 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <Check className="w-5 h-5 text-primary" />
-            <span>Zero Hidden Charges</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Check className="w-5 h-5 text-primary" />
-            <span>Free Expert Consultation</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Check className="w-5 h-5 text-primary" />
-            <span>7-Day Delivery Guarantee</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { FileText, Building2, Receipt, Utensils, FileCheck, Calculator } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
-const services = [
-  {
-    icon: Building2,
-    title: "Company & LLP Registration",
-    description: "Register your Private Limited, LLP, OPC, or Partnership firm with complete documentation and government fee inclusion.",
-    features: ["DIN & DSC", "MOA/AOA", "PAN/TAN", "Certificate"],
-  },
-  {
-    icon: Receipt,
-    title: "GST Registration & Filing",
-    description: "Complete GST registration and monthly/quarterly return filing services with expert guidance.",
-    features: ["GSTR-1", "GSTR-3B", "Annual Return", "Compliance"],
-  },
-  {
-    icon: FileText,
-    title: "ITR Filing",
-    description: "Individual and business income tax return filing with maximum refund optimization.",
-    features: ["ITR-1 to ITR-7", "Tax Planning", "Refund Claims", "Notice Support"],
-  },
-  {
-    icon: Utensils,
-    title: "Food Licence (FSSAI)",
-    description: "Get your food business registered with FSSAI - Basic, State, and Central licenses available.",
-    features: ["Registration", "State License", "Central License", "Renewal"],
-  },
-  {
-    icon: FileCheck,
-    title: "ROC Filings & Compliance",
-    description: "Annual ROC filings, form submissions, and company compliance management.",
-    features: ["Annual Returns", "Form MGT-7", "Form AOC-4", "DIR-3 KYC"],
-  },
-  {
-    icon: Calculator,
-    title: "Audit Services",
-    description: "Comprehensive audit services including statutory, tax, and internal audits.",
-    features: ["Statutory Audit", "Tax Audit", "Internal Audit", "GST Audit"],
-  },
-];
-
-export const Services = () => {
-  const handleWhatsApp = (service: string) => {
-    window.open(`https://wa.me/919876543210?text=Hi, I want to know more about ${service}`, "_blank");
-  };
-
-  return (
-    <section id="services" className="py-20 bg-secondary/30">
-      <div className="container px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold text-foreground">
-            Our Professional Services
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Complete business solutions from company registration to compliance management
+        <div class="bg-slate-50 rounded-xl p-6 card-hover">
+          <h3 class="text-xl font-bold mb-2">Audit & Assurance</h3>
+          <p class="text-slate-600 text-sm mb-4">
+            Statutory, tax and internal audits to give clarity and confidence to you and your stakeholders.
           </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <Card 
-                key={index} 
-                className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50 hover:-translate-y-1 bg-card"
-              >
-                <CardHeader>
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                    <Icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                  <CardDescription className="text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-muted-foreground">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mr-3"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  <Button 
-                    onClick={() => handleWhatsApp(service.title)}
-                    variant="outline" 
-                    className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-                  >
-                    Get Started
-                  </Button>
-                </CardContent>
-              </Card>
-            );
-          })}
+          <ul class="text-sm text-slate-600 space-y-1 mb-4">
+            <li>• Statutory & tax audit support</li>
+            <li>• Internal audit & controls review</li>
+            <li>• GST & compliance review</li>
+          </ul>
+          <button onclick="scrollToId('contact')" class="text-sm font-semibold text-blue-600">
+            Schedule a call →
+          </button>
         </div>
       </div>
-    </section>
-  );
-};
-
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vidwaan Consultancy - Company Registration, GST, ITR Filing Services</title>
-    <meta name="description" content="Professional consultancy services for company registration, GST, ITR filing, food licence, ROC filings, and audit services. Starting at ₹5,999 with 7-day delivery guarantee." />
-    <meta name="author" content="Vidwaan Consultancy" />
-
-    <meta property="og:title" content="Vidwaan Consultancy - Business Registration & Compliance" />
-    <meta property="og:description" content="Register your company in just 7 days starting at ₹5,999. Complete business solutions with zero hidden charges." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
-
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
-
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 238 70% 55%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 220 14% 96%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 45 93% 47%;
-    --accent-foreground: 0 0% 0%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 238 70% 55%;
-
-    --radius: 0.75rem;
-    
-    --gradient-hero: linear-gradient(135deg, hsl(238 70% 55%), hsl(250 65% 45%));
-    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 14% 98%));
-    --shadow-elevated: 0 10px 40px -10px hsl(238 70% 55% / 0.2);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 238 70% 60%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 45 93% 52%;
-    --accent-foreground: 0 0% 0%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 238 70% 60%;
-    
-    --gradient-hero: linear-gradient(135deg, hsl(238 70% 60%), hsl(250 65% 50%));
-    --gradient-card: linear-gradient(180deg, hsl(222.2 84% 4.9%), hsl(217.2 32.6% 17.5%));
-    --shadow-elevated: 0 10px 40px -10px hsl(238 70% 60% / 0.3);
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { Services } from "@/components/Services";
-import { Pricing } from "@/components/Pricing";
-import { Contact } from "@/components/Contact";
-import { Footer } from "@/components/Footer";
-
-const Index = () => {
-  return (
-    <div className="min-h-screen">
-      <Navbar />
-      <main className="pt-16 md:pt-20">
-        <Hero />
-        <Services />
-        <div id="pricing">
-          <Pricing />
-        </div>
-        <div id="contact">
-          <Contact />
-        </div>
-      </main>
-      <Footer />
     </div>
-  );
-};
+  </section>
 
-export default Index;
+  <!-- HOW IT WORKS -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">How it works</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow card-hover text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-4 font-bold">1</div>
+          <h3 class="font-semibold mb-2">Share requirements</h3>
+          <p class="text-sm text-slate-600">Call or WhatsApp us with your business details and goals.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow card-hover text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-4 font-bold">2</div>
+          <h3 class="font-semibold mb-2">We prepare & file</h3>
+          <p class="text-sm text-slate-600">Our team collects documents, prepares forms and files with authorities.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow card-hover text-center">
+          <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-4 font-bold">3</div>
+          <h3 class="font-semibold mb-2">Get certificates</h3>
+          <p class="text-sm text-slate-600">We share the registration certificate and further compliance plan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- PRICING -->
+  <section id="pricing" class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-3">
+        Company Registration Packages
+      </h2>
+      <p class="text-center text-slate-600 mb-10">
+        Includes Govt fees, DSC, DIN, PAN, TAN & incorporation certificate.
+      </p>
 
-import type { Config } from "tailwindcss";
+      <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <!-- Basic -->
+        <div class="border border-slate-200 rounded-2xl p-6 card-hover bg-slate-50">
+          <h3 class="text-xl font-bold mb-2">Basic</h3>
+          <p class="text-3xl font-extrabold mb-1">₹5,999</p>
+          <p class="text-xs text-slate-500 line-through mb-4">₹12,000</p>
+          <ul class="text-sm text-slate-600 space-y-2 mb-6">
+            <li>✔ Name approval (2 options)</li>
+            <li>✔ DIN & DSC</li>
+            <li>✔ MOA & AOA drafting</li>
+            <li>✔ PAN & TAN</li>
+          </ul>
+          <a href="https://wa.me/919514327271?text=I%20want%20Basic%20Company%20Registration%20Package" target="_blank"
+             class="block text-center bg-slate-900 text-white py-2.5 rounded-lg text-sm font-semibold">
+            Choose Basic
+          </a>
+        </div>
 
-export default {
-  darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
-  prefix: "",
-  theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
-    extend: {
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
-      },
-      backgroundImage: {
-        'gradient-hero': 'var(--gradient-hero)',
-        'gradient-card': 'var(--gradient-card)',
-      },
-      boxShadow: {
-        'elevated': 'var(--shadow-elevated)',
-      },
-      transitionProperty: {
-        'smooth': 'var(--transition-smooth)',
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
-        },
-        "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
-    },
-  },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+        <!-- Standard -->
+        <div class="border-2 border-primary rounded-2xl p-6 card-hover bg-white scale-105">
+          <div class="inline-block px-3 py-1 bg-accent text-black text-xs font-bold rounded-full mb-3">
+            MOST POPULAR
+          </div>
+          <h3 class="text-xl font-bold mb-2">Standard</h3>
+          <p class="text-3xl font-extrabold mb-1">₹9,999</p>
+          <p class="text-xs text-slate-500 line-through mb-4">₹18,000</p>
+          <ul class="text-sm text-slate-600 space-y-2 mb-6">
+            <li>✔ Everything in Basic</li>
+            <li>✔ Bank account opening support</li>
+            <li>✔ GST registration</li>
+            <li>✔ 3 months accounting support</li>
+          </ul>
+          <a href="https://wa.me/919514327271?text=I%20want%20Standard%20Company%20Registration%20Package" target="_blank"
+             class="block text-center bg-primary text-white py-2.5 rounded-lg text-sm font-semibold">
+            Choose Standard
+          </a>
+        </div>
+
+        <!-- Premium -->
+        <div class="border border-slate-200 rounded-2xl p-6 card-hover bg-slate-50">
+          <h3 class="text-xl font-bold mb-2">Premium</h3>
+          <p class="text-3xl font-extrabold mb-1">₹14,999</p>
+          <p class="text-xs text-slate-500 line-through mb-4">₹28,000</p>
+          <ul class="text-sm text-slate-600 space-y-2 mb-6">
+            <li>✔ Everything in Standard</li>
+            <li>✔ Trademark filing</li>
+            <li>✔ 1 year GST return filing</li>
+            <li>✔ Dedicated CA support</li>
+          </ul>
+          <a href="https://wa.me/919514327271?text=I%20want%20Premium%20Company%20Registration%20Package" target="_blank"
+             class="block text-center bg-gradient-to-r from-primary to-indigo-700 text-white py-2.5 rounded-lg text-sm font-semibold">
+            Choose Premium
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCUMENTS REQUIRED -->
+  <section class="py-16 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-3">Documents required</h2>
+      <p class="text-slate-600 mb-8">Simple list of documents to start registration.</p>
+
+      <div class="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white p-6 rounded-xl shadow card-hover">
+          <i class="fas fa-id-card text-blue-600 text-2xl mb-3"></i>
+          <div class="font-semibold">PAN & Aadhaar</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow card-hover">
+          <i class="fas fa-image text-blue-600 text-2xl mb-3"></i>
+          <div class="font-semibold">Photo of directors</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow card-hover">
+          <i class="fas fa-home text-blue-600 text-2xl mb-3"></i>
+          <div class="font-semibold">Rent agreement / NOC</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow card-hover">
+          <i class="fas fa-bolt text-blue-600 text-2xl mb-3"></i>
+          <div class="font-semibold">Electricity bill</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Frequently asked questions</h2>
+      <div class="space-y-4">
+        <details class="bg-slate-50 p-4 rounded-lg">
+          <summary class="font-semibold cursor-pointer">How long does company registration take?</summary>
+          <p class="text-sm text-slate-600 mt-2">Usually 7–10 working days after all documents are submitted.</p>
+        </details>
+        <details class="bg-slate-50 p-4 rounded-lg">
+          <summary class="font-semibold cursor-pointer">Is DSC and DIN included?</summary>
+          <p class="text-sm text-slate-600 mt-2">Yes, our standard packages include 2 DIN and 2 Class-3 DSC where required.</p>
+        </details>
+        <details class="bg-slate-50 p-4 rounded-lg">
+          <summary class="font-semibold cursor-pointer">Do you help with GST & ITR as well?</summary>
+          <p class="text-sm text-slate-600 mt-2">Yes, we provide GST registration & filings, ITR filing, ROC, bookkeeping and audits.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-16 bg-blue-50">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-3">Get free consultation today</h2>
+      <p class="text-slate-600 mb-6 max-w-2xl mx-auto">
+        Share your requirements and our team will guide you on the best structure, cost and compliance.
+      </p>
+
+      <div class="max-w-xl mx-auto space-y-3 text-sm text-slate-800">
+        <div><strong>Phone:</strong> <a href="tel:+919514327271" class="text-blue-700 font-semibold">+91 95143 27271</a></div>
+        <div><strong>Email:</strong> <a href="mailto:info@vidwaanconsultancy.com" class="text-blue-700 font-semibold">info@vidwaanconsultancy.com</a></div>
+        <div><strong>Locations:</strong> Bangalore & Hyderabad (serving all India remotely)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-300 py-6 text-center text-sm">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="mb-2 font-semibold text-white">Vidwaan Consultancy</div>
+      <div>Bangalore & Hyderabad • Tax, Accounting & Business Registration</div>
+      <div class="mt-2 text-xs text-slate-500">© <span id="year"></span> Vidwaan Consultancy. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById("year").innerText = new Date().getFullYear();
+
+    // Smooth scroll function
+    function scrollToId(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // Simple mailto fallback for hero form
+    document.getElementById("leadForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const name = encodeURIComponent(form.name.value);
+      const phone = encodeURIComponent(form.phone.value);
+      const email = encodeURIComponent(form.email.value || "");
+      const service = encodeURIComponent(form.service.value);
+      const msg = encodeURIComponent(form.message.value || "");
+
+      const subject = encodeURIComponent("New enquiry: " + service + " — " + name);
+      const body = "Name: " + name +
+                   "%0APhone: " + phone +
+                   "%0AEmail: " + email +
+                   "%0AService: " + service +
+                   "%0A%0A" + msg;
+
+      window.location.href = "mailto:info@vidwaanconsultancy.com?subject=" + subject + "&body=" + body;
+    });
+  </script>
+</body>
+</html>
